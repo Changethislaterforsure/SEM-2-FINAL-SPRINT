@@ -1,0 +1,60 @@
+{
+    "products": [
+      {
+        "id": 1,
+        "name": "Dragon Knight Squad",
+        "description": "Take the fight to all of you're enemies with the Dragon Knight squad, these formidable warriors come in a set of 5 and include 10 different styles of sword and shield for you're customizing pleasure.",
+        "price": 39.99,
+        "image": "/images/FireKnight.png"
+      },
+      {
+        "id": 2,
+        "name": "Dragon Juggernaut Squad",
+        "description": "Become unmovable with the Dragon Juggernaut squad! These heavily armored warriors come in a set of 5 and include up to 20 different weapon combinations from mighty warhammers to rapid firing rifles.",
+        "price": 39.99,
+        "image": "/images/FireJuggernaut.png"
+      },
+      {
+        "id": 3,
+        "name": "Dragon Heavy Support Squad",
+        "description": "Many are you're foe, slim is their odds after you deploy this Heavy Support Squad. These models come in a set of 3 and include both bulletstorm and flamethrower guantlets.",
+        "price": 35.99,
+        "image": "/images/FireHeavy.png"
+      },
+
+      {
+        "id": 4,
+        "name": "Dragon Medic",
+        "description": "Never shall you're numbers falter in the presence of this fiery medic. This unique model includes a selection of tools and weapons so that you're medic can heal or harm at you're leisure.",
+        "price": 15.99,
+        "image": "/images/FireMedic.png"
+      },
+
+      {
+        "id": 5,
+        "name": "Dragon Bike Squad",
+        "description": "Race into battle with this Dragon Bike Squad, swiftly press every advantage with this set of 3 models which include 7 different stylized swords and an array of decorative bits for their bikes.",
+        "price": 45.99,
+        "image": "/images/FireRiders.png"
+      },
+
+      {
+        "id": 6,
+        "name": "Dragon Priest",
+        "description": "His faith burns as bright as dragonfire, add this unique model to you're collection and show the foe what faith s capable of.",
+        "price": 8.99,
+        "image": "/images/FirePriest.png"
+      },
+
+      {
+        "id": 7,
+        "name": "Dragon Tank",
+        "description": "The foe shall quake in fear of this metal monster, with the armor and firepower to rival dragons this heavy tank will carry you towards victory.",
+        "price": 55.99,
+        "image": "/images/FireTank.png"
+      }
+
+
+    ],
+    "cart": []
+  }
