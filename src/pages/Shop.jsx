@@ -3,22 +3,22 @@ import { CartContext } from "../context/CartContext";
 import "./Shop.css";
 
 function Shop() {
-  const [products, setProducts] = useState([]);
-  const [selectedProduct, setSelectedProduct] = useState(null);
-  const [showConfirm, setShowConfirm] = useState(false);
+  const [products, setProducts] = useState([]); // State to store the list of products fetched from the mock API
+  const [selectedProduct, setSelectedProduct] = useState(null); // State to store which product is currently selected (for the VIEW modal)
+  const [showConfirm, setShowConfirm] = useState(false); // State to control visibility of the "Added to Cart" confirmation
 
   const { addToCart } = useContext(CartContext);
 
-  useEffect(() => {
+  useEffect(() => { // Fetch all products from the mock API when the component mounts
     fetch("http://localhost:3001/products")
       .then((res) => res.json())
       .then((data) => setProducts(data));
   }, []);
 
-  const handleAddToCart = (product) => {
+  const handleAddToCart = (product) => { // Handle adding an item to the cart and trigger a temporary confirmation popup
     addToCart(product);
     setShowConfirm(true);
-    setTimeout(() => setShowConfirm(false), 2500);
+    setTimeout(() => setShowConfirm(false), 2500); //auto hide confirmation popup after delay
   };
 
   return (
