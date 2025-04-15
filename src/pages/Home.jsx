@@ -4,14 +4,14 @@ import ProductCard from "../components/ProductCard";
 import "./Home.css";
 
 function Home() {
-  const { addToCart } = useContext(CartContext);
-  const [dealProduct, setDealProduct] = useState(null);
+  const { addToCart } = useContext(CartContext); // Access cart context for add-to-cart functionality
+  const [dealProduct, setDealProduct] = useState(null);  // Store today's featured deal product
   const [selectedProduct, setSelectedProduct] = useState(null);
-  const [countdown, setCountdown] = useState("");
+  const [countdown, setCountdown] = useState(""); // Countdown string for timer
   const [images, setImages] = useState([]);
   const [current, setCurrent] = useState(0);
 
-  const dealMap = {
+  const dealMap = { // Map weekday number to product ID
     0: 7, // Sunday
     1: 1, // Monday
     2: 2,
@@ -21,7 +21,7 @@ function Home() {
     6: 6  // Saturday
   };
 
-  useEffect(() => {
+  useEffect(() => {  // Load today's featured deal product
     const day = new Date().getDay();
     const saleId = dealMap[day];
 
@@ -31,7 +31,7 @@ function Home() {
       .then((data) => setDealProduct({ ...data, onSale: true }));
   }, []);
 
-  useEffect(() => {
+  useEffect(() => { // Load all product images for carousel
     fetch("http://localhost:3001/products")
       .then((res) => res.json())
       .then((data) => setImages(data.map((p) => p.image)));
@@ -109,8 +109,8 @@ function Home() {
         <h2>About Our Shop</h2>
         <p>
           WarForge Minis specializes in highly detailed sci-fi miniatures, perfect for
-          tabletop battles or display. Whether you're building an elite space marine army
-          or a rogue mech gang, we've got the models to elevate your game.
+          tabletop battles or display. Every purchase is made to order in 28mm or 32mm size
+          supports always added to avoid damage during shipping. 
         </p>
       </section>
 
@@ -120,6 +120,9 @@ function Home() {
         <p>
           Not satisfied? We offer refunds within 14 days of delivery for any
           unassembled, unopened products. Your satisfaction is our command directive.
+          If for any reason you receive a product you discover is defective during
+          assembly please contact our customer service by email at 
+          warforgeSteve@totallyrealemail.com for resolution. 
         </p>
       </section>
 
