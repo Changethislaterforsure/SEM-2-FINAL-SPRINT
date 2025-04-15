@@ -1,5 +1,4 @@
-{
-    "products": [
+"products": [
       {
         "id": 1,
         "name": "Dragon Knight Squad",
@@ -52,6 +51,15 @@
         "description": "The foe shall quake in fear of this metal monster, with the armor and firepower to rival dragons this heavy tank will carry you towards victory.",
         "price": 55.99,
         "image": "/images/FireTank.png"
+      },
+
+      {
+        "id": 8,
+        "name": "Dragon upgrade array",
+        "description": "Bring home this upgrade array and show the world how you're dragons stand alone. This array consists of armor plates, helmets and shields featuring unique imagery and textures to help make any army stand out.",
+        "price": 12.99,
+        "image": "/images/Bits.png"
+
       }
 
 
