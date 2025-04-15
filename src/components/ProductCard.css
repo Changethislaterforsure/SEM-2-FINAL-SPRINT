@@ -1,0 +1,12 @@
+.sale-tag {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    background: #ff4444;
+    color: white;
+    font-weight: bold;
+    font-size: 0.75rem;
+    padding: 4px 8px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px #ff444488;
+  }

@@ -1,0 +1,128 @@
+.cart-page {
+    padding: 60px 30px;
+    color: #e0e0f0;
+    font-family: 'Orbitron', sans-serif;
+    text-align: center;
+    background-color: #0e0e1f;
+  }
+  
+  .cart-list {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 40px;
+  }
+  
+  .cart-item {
+    display: flex;
+    align-items: center;
+    background: #1a1a2e;
+    border: 1px solid #00ffff33;
+    border-radius: 12px;
+    padding: 16px;
+    margin: 12px auto;
+    max-width: 600px;
+    box-shadow: 0 0 10px #00ffff22;
+  }
+  
+  .cart-item img {
+    height: 80px;
+    width: 80px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-right: 20px;
+  }
+  
+  .cart-item h3 {
+    margin: 0 0 4px 0;
+  }
+  
+  .cart-summary {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    background: #1e1e30;
+    border-radius: 12px;
+    box-shadow: 0 0 15px #00ffff55;
+  }
+  
+  .checkout-btn {
+    margin-top: 20px;
+    padding: 12px 24px;
+    font-weight: bold;
+    background-color: #00ffff;
+    color: #000;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.2s;
+  }
+  
+  .checkout-btn:hover {
+    background-color: #00b4cc;
+  }
+
+  .cart-item button:hover {
+    background: #ff0000;
+    box-shadow: 0 0 12px red;
+    transform: scale(1.05);
+  }
+
+  .sale-note {
+    color: #ff4444;
+    font-weight: bold;
+    font-size: 0.85rem;
+    text-shadow: 0 0 6px #ff4444aa;
+  }
+
+  /* Checkout Modal */
+.checkout-modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 20, 0.8);
+    backdrop-filter: blur(6px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+  }
+  
+  .checkout-modal-content {
+    text-align: center;
+    background: #1e1e30;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 0 25px #00ffff88;
+    color: #00ffff;
+    animation: pop-in 0.4s ease-out forwards;
+  }
+  
+  @keyframes pop-in {
+    0% {
+      transform: scale(0.8);
+      opacity: 0;
+    }
+    100% {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+  
+  /* Animated glowing ring */
+  .loader-ring {
+    border: 5px solid transparent;
+    border-top: 5px solid #00ffff;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    margin: 0 auto 20px;
+    animation: spin 1s linear infinite;
+  }
+  
+  @keyframes spin {
+    to {
+      transform: rotate(360deg);
+    }
+  }
