@@ -4,10 +4,10 @@ import { CartContext } from "../context/CartContext";
 import "./Cart.css";
 
 function Cart() {
-  const { cartItems, removeFromCart } = useContext(CartContext);
-  const navigate = useNavigate();
+  const { cartItems, removeFromCart } = useContext(CartContext); // Access cart state and cart actions from context
+  const navigate = useNavigate(); // Used to redirect to the checkout form
 
-  const dealMap = {
+  const dealMap = { // Map each day of the week to a product ID for daily sale
     0: 7,
     1: 1,
     2: 4,
@@ -17,17 +17,17 @@ function Cart() {
     6: 2
   };
 
-  const day = new Date().getDay();
+  const day = new Date().getDay(); // Get the current day's deal ID
   const saleId = dealMap[day];
 
-  const discountedPrice = (item) =>
+  const discountedPrice = (item) => // Calculate price for each item, applying 5% discount if it's today's deal
     item.id === saleId ? item.price * 0.95 : item.price;
 
-  const subtotal = cartItems.reduce((sum, item) => sum + discountedPrice(item), 0);
+  const subtotal = cartItems.reduce((sum, item) => sum + discountedPrice(item), 0); // Calculate cart totals
   const tax = subtotal * 0.15;
   const total = subtotal + tax;
 
-  const handleCheckout = () => {
+  const handleCheckout = () => { // When "Proceed to Checkout" is clicked, navigate to the form page
     navigate("/checkout");
   };
 
